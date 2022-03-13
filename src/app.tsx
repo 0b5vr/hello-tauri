@@ -1,10 +1,16 @@
-import { Logo } from './logo'
+import { Logo } from './logo';
+import { FunctionalComponent } from 'preact';
 
-export function App() {
+interface Props {
+  bootCount: number;
+}
+
+export const App: FunctionalComponent<Props> = ( { bootCount } ) => {
   return (
     <>
       <Logo />
       <p>Hello Vite + Preact!</p>
+      <p>bootCount: { bootCount }</p>
       <p>
         <a
           class="link"
@@ -16,5 +22,5 @@ export function App() {
         </a>
       </p>
     </>
-  )
-}
+  );
+};

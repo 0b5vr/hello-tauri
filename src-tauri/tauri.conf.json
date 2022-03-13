@@ -50,7 +50,16 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "fs": {
+        "scope": [ "$APP", "$APP/**/*" ],
+        "createDir": true,
+        "readDir": true,
+        "readFile": true,
+        "writeFile": true
+      },
+      "path": {
+        "all": true
+      }
     },
     "windows": [
       {
